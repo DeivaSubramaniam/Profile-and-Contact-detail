@@ -1,0 +1,12 @@
+.form-group{
+width:400px;
+display:inline-block;
+}
+.container-fluid{
+  padding-left:150px;
+}
+#about{
+  width:1000px;
+  height:100px;
+}
+

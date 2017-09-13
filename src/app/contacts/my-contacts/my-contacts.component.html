@@ -1,0 +1,46 @@
+ <!--<div class="example-container">
+  <md-table #table [dataSource]="dataSource">
+
+    <ng-container mdColumnDef="position">
+      <md-header-cell *mdHeaderCellDef> No. </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.position}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="name">
+      <md-header-cell *mdHeaderCellDef> Name </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.name}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="email">
+      <md-header-cell *mdHeaderCellDef> Email </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.email}} </md-cell>
+    </ng-container>
+
+    <ng-container mdColumnDef="contact">
+      <md-header-cell *mdHeaderCellDef> Contact No </md-header-cell>
+      <md-cell *mdCellDef="let element"> {{element.contact}} </md-cell>
+    </ng-container>
+
+    <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
+    <md-row *mdRowDef="let row; columns: displayedColumns;"></md-row>
+
+  </md-table> </div>-->
+  
+
+<table mdSort (mdSortChange)="sortData($event)">
+  <tr>
+    <th md-sort-header="position">position</th>
+    <th md-sort-header="avatar">Avatar</th>
+    <th md-sort-header="name">Name</th>
+    <th md-sort-header="email">Email</th>
+    <th md-sort-header="contact">Contact No</th>
+  </tr>
+
+  <tr *ngFor="let contact of sortedData">
+    <td>{{contact.position}}</td>
+    <td>{{contact.avatar}}
+    <td>{{contact.name}}</td>
+    <td>{{contact.email}}</td>
+    <td>{{contact.contact}}</td>
+  </tr>
+</table>

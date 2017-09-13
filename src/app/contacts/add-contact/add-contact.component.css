@@ -1,0 +1,46 @@
+/*.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+ font-size:20px;
+ border-left:80px;
+ }*/
+.container-fluid{
+  padding-left:200px;
+}
+.example-full-width {
+  width: 20%;
+  padding-left:20px;
+  font-size:15px;
+ }
+ .address > .example-full-width{
+ width: 40%;
+ }
+ .btn{
+   position: absolute;
+   left:280px;
+   color:white;
+   font-size:15px;
+  }
+img{
+  max-width:180px;
+}
+input[type=file]{
+padding:10px;
+background:grey;
+}
+ .btn1{
+   position:absolute;
+   left:850px;
+   top:650px;
+   color:black;
+   background-color:white;
+   font-size:15px;
+ }
+#image-content{
+   border: solid 1px black;
+}
+
+.formContent{
+  padding-left:200px;
+}

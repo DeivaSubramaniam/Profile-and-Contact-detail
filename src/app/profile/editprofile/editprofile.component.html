@@ -1,0 +1,68 @@
+<div class="container-fluid">
+<div class="row">
+<form role="form">
+<div class="col-sm-9">
+  <div class="form-group">
+    <label for="fname">First Name*</label>
+    <input type="text" name="fname" [(ngModel)]="fname" class="form-control" id="fname" size="20px">
+  </div>
+  <div class="form-group">
+    <label for="lname">Last Name*</label>
+    <input type="text" name="lname" [(ngModel)]="lname" class="form-control" id="lname" size="20px">
+  </div>
+  <div class="form-group">
+    <label for="mname">Middle Name</label>
+    <input type="text" name="mname" [(ngModel)]="mname" class="form-control" id="mname" size="20px">
+  </div>
+  <div class="form-group">
+    <label for="dob">DOB*</label>
+    <input type="date" name="dob" [(ngModel)]="dob" class="form-control"  id="birthdate">
+    <!--[(ngModel)]="birthdate"-->
+    <!--<div class="has-feedback">
+		    <input class="form-control" name="somedate" id="somedate" value="">
+		    <span class="form-control-feedback"><i class="fa fa-calendar"></i></span>
+	    </div>-->
+    </div>
+  <div class="form-group">
+    <label for="age">Age</label>
+    <input type="number" name="age" [(ngModel)]="age" class="form-control">
+    <!--[(ngModel)]="age"-->
+  </div>
+  <div class="form-group">
+    <label for="email">Email*</label>
+    <input type="email" name="email" [(ngModel)]="email" class="form-control input-sm" id="email">
+  </div>
+  <div class="form-group">
+    <label for="number">Contact No1*</label>
+    <input type="number" name="cno1" [(ngModel)]="cno1" class="form-control input-sm" id="no1">
+  </div>
+  <div class="form-group">
+    <label for="number">Contact No2*</label>
+    <input type="number" name="cno2" [(ngModel)]="cno2" class="form-control input-sm" id="no2">
+  </div>
+  <div class="form-group">
+    <label for="address">Address*</label>
+    <input type="text" name="address" [(ngModel)]="address" class="form-control input-lg" id="no2">
+  </div>
+  <div class="form-group">
+    <label for="about">About Me</label>
+    <input type="text" name="ame" [(ngModel)]="ame" class="form-control input-lg" id="about">
+  </div>
+</div>
+<div class="col-sm-3">
+  <div class="form-group">
+    <!--<app-imagecontent></app-imagecontent><br><br>-->
+    <!--<img id="myImg" src="http://placehold.it/180" alt="your image" /><br><br>
+    <input type='file' class="btn btn-info" onchange="readURL(this);"/><br>-->
+    <img id="image-content" [src]="image">
+    <input type='file' onchange="readURL(this);">
+    <input type="submit" class="btn btn-info" (click)="save()" value="Save My Info">
+    <input type="button" class="btn btn-info" (click)="reset()" value="Reset">
+    <input type="button" class="btn btn-info" (click)="myFunction()" value="Cancel">
+    <img id="image-content" *ngIf="image" [src]="image" ><br><br>
+    <button type="file" class="btn btn-info" ngFilePicker (filePick)="image = $event.dataURL">Browse Image File</button>
+  </div>
+</div>
+</form>
+</div>
+</div>
